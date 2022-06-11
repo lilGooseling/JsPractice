@@ -74,9 +74,36 @@
 //document.write(answers);
 //console.log(typeof (answers));
 
-const category = 'toys';
+//const category = 'toys';
 //console.log('http://someurl.com/' + category);
-console.log(`http://someurl.com/${category}/5`);
+//console.log(`http://someurl.com/${category}/5`);
 
-const user = 'Ivan';
-alert(`Привет, ${user}`);
+//const user = 'Ivan';
+//alert(`Привет, ${user}`);
+
+console.log('arr' + '- object');
+console.log(4 + '- object');
+console.log(4 + +'5');
+
+let incr = 10,
+    decr = 10;
+//incr++;
+//decr--;
+console.log(++incr);
+console.log(--decr);
+
+console.log(5%2);
+
+console.log(2*4 === 8);
+
+//const isChecked = true,
+    //isClose = true;
+//console.log(isChecked && isClose);
+
+//const isChecked = true,
+    //isClose = false;
+//console.log(isChecked || isClose);
+
+const isChecked = false,
+    isClose = false;
+console.log(isChecked || !isClose);
