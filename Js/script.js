@@ -135,7 +135,7 @@
     //console.log('Error');
 //}
 
-const num = 50;
+//const num = 50;
 //if (num < 49) {
     //console.log('Error');
 //} else if (num > 100) {
@@ -146,17 +146,63 @@ const num = 50;
 
 //(num === 50) ? console.log('Ok!') : console.log('Error');
 
-switch (num) {
-    case 49:
-        console.log('Неверно');
-        break;
-    case 100:
-        console.log('Неверно');
-        break;
-    case 50:
-        console.log('Верно!');
-        break;
-    default:
-        console.log('Не в этот раз');
-        break;
-}
+//switch (num) {
+    //case 49:
+        //console.log('Неверно');
+        //break;
+    //case 100:
+        //console.log('Неверно');
+        //break;
+    //case 50:
+        //console.log('Верно!');
+        //break;
+    //default:
+        //console.log('Не в этот раз');
+        //break;
+//}
+
+//const hamburger = true;
+//const fries = true;
+
+//if (hamburger && fries) {
+    //console.log('Я сыт!');
+//}
+//console.log((hamburger && fries));
+
+//const hamburger = 5;
+//const fries = 0;
+
+//if (hamburger && fries) {
+    //console.log('Я сыт!');
+//}
+//console.log((hamburger && fries));
+
+//const hamburger = 2;
+//const fries = 1;
+
+//if (hamburger === 3 && fries) {
+    //console.log('Все сыты!');
+//} else {
+    //console.log('Мы уходим');
+//}
+
+//const hamburger = 3;
+//const fries = 1;
+//const cola = 0;
+
+//if (hamburger === 3 && cola === 1 && fries) {
+    //console.log('Все сыты!');
+//} else {
+   // console.log('Мы уходим');
+//}
+
+const hamburger = 3;
+const fries = 1;
+const cola = 0;
+
+console.log(hamburger === 3 && cola && fries);
+
+console.log(1 && 0);
+console.log(1 && 5);
+//console.log(null && 5);
+console.log(0 && 'dghsfghsfg');
