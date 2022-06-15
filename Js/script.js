@@ -196,13 +196,26 @@
    // console.log('Мы уходим');
 //}
 
+//const hamburger = 3;
+//const fries = 1;
+//const cola = 0;
+
+//console.log(hamburger === 3 && cola && fries);
+
+//console.log(1 && 0);
+//console.log(1 && 5);
+//console.log(null && 5);
+//console.log(0 && 'dghsfghsfg');
+
 const hamburger = 3;
-const fries = 1;
+const fries = 0;
 const cola = 0;
 
-console.log(hamburger === 3 && cola && fries);
+if (hamburger || cola || fries) {
+    console.log('Мы довольны');
+} else {
+    console.log('Мы ушли');
+}
 
-console.log(1 && 0);
-console.log(1 && 5);
-//console.log(null && 5);
-console.log(0 && 'dghsfghsfg');
+//let johnReport, alexReport, samReport, mariaReport = 'done';
+//console.log( johnReport || alexReport || samReport || mariaReport);
