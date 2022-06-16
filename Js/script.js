@@ -220,17 +220,56 @@
 //let johnReport, alexReport, samReport, mariaReport = 'done';
 //console.log( johnReport || alexReport || samReport || mariaReport);
 
+//const hamburger = 3;
+//const fries = 3;
+//const cola = 0;
+//const nuggets = 2;
+
+//if (hamburger === 3 && cola === 2 || fries === 3 && nuggets ) {
+    //console.log('Мы довольны');
+//} else {
+    //console.log('Мы ушли');
+//}
+
+//console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+
+//console.log(!0);
+
+console.log( NaN || 2 || undefined );
+console.log( NaN && 2 && undefined );
+console.log( 1 && 2 && 3 );
+console.log( !1 && 2 || !3 );
+//console.log( 25 || null && !3 );
+console.log( NaN || null || !3 || undefined || 5);
+//console.log( NaN || null && !3 && undefined || 5);
+console.log( 5 === 5 && 3 > 1 || 5);
+
 const hamburger = 3;
 const fries = 3;
 const cola = 0;
 const nuggets = 2;
 
-if (hamburger === 3 && cola === 2 || fries === 3 && nuggets ) {
-    console.log('Мы довольны');
-} else {
-    console.log('Мы ушли');
+if (hamburger === 3 && cola || fries === 3 && nuggets) {
+    console.log('Done!')
 }
 
-console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+let ham;
+const pasta = NaN;
+const juse = 0;
+const pizza = 2;
 
-console.log(!0);
+if (ham || juse || pasta === 3 || pizza) {
+    console.log('Done!')
+}
+
+let broccoli;
+const potato = NaN;
+const water = 0;
+const meat = 2;
+
+if (broccoli && water || potato === 3 && meat) {
+    console.log('Done!')
+}
+
+
+
