@@ -207,15 +207,30 @@
 //console.log(null && 5);
 //console.log(0 && 'dghsfghsfg');
 
-const hamburger = 3;
-const fries = 0;
-const cola = 0;
+//const hamburger = 3;
+//const fries = 0;
+//const cola = 0;
 
-if (hamburger || cola || fries) {
+//if (hamburger || cola || fries) {
+    //console.log('Мы довольны');
+//} else {
+    //console.log('Мы ушли');
+//}
+
+//let johnReport, alexReport, samReport, mariaReport = 'done';
+//console.log( johnReport || alexReport || samReport || mariaReport);
+
+const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger === 3 && cola === 2 || fries === 3 && nuggets ) {
     console.log('Мы довольны');
 } else {
     console.log('Мы ушли');
 }
 
-//let johnReport, alexReport, samReport, mariaReport = 'done';
-//console.log( johnReport || alexReport || samReport || mariaReport);
+console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+
+console.log(!0);
