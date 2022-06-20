@@ -338,7 +338,7 @@ for (let i = 0; i < 3; i++) {
     //}
 //}
 
-const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
+/*const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
 
 
 const personalMovieDB = {
@@ -347,7 +347,7 @@ movies: {},
 actors: {},
 genres: [],
 privat: false
-};
+};*/
 
 /*const a = prompt('Один из последних просмотренных фильмов?', ''),
 b = prompt('На сколько оцените его?', ''),
@@ -357,7 +357,7 @@ personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 console.log(personalMovieDB);*/
 
-for (let i = 0; i < 2; i++) {
+/*for (let i = 0; i < 2; i++) {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
           b = prompt('На сколько оцените его?', '');
     if ( a != null && b != null && a !== '' && b !== '' && a.length < 50) {
@@ -380,4 +380,38 @@ if (personalMovieDB.count < 10) {
 }
 
 
-console.log(personalMovieDB);
+console.log(personalMovieDB);*/
+
+
+/*function showFirstMessage() {
+    console.log('Hello World!');
+}
+showFirstMessage();*/
+
+/*let  num = 20;
+function showFirstMessage(text) {
+    console.log(text);
+    num = 10;
+}
+showFirstMessage('Hello World!');
+console.log(num);*/
+
+/*function calc(a, b) {
+    return(a + b);
+}
+console.log(calc(4, 3));
+console.log(calc(5, 6));
+console.log(calc(10, 6));*/
+
+/*function ret() {
+    let num = 50;
+    return num;
+}
+const anotherNum = ret();
+console.log(anotherNum);*/
+
+const logger = function () {
+    console.log('Hello');
+};
+logger();
+
