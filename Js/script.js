@@ -424,7 +424,7 @@ function convert(amount, curr) {
 convert(500, usdCurr);
 convert(500, eurCurr);*/
 
-const  usdCurr = 28;
+/*const  usdCurr = 28;
 const discount = 0.9;
 
 function convert(amount, curr) {
@@ -445,6 +445,23 @@ function test() {
 test();
 
 function doNothing() {};
-console.log(doNothing() === undefined);
+console.log(doNothing() === undefined);*/
+
+//const str = 'test';
+//console.log(str.length);
+
+const arr = [1, 2, 4];
+console.log(arr.length);
+
+const str = 'test';
+console.log(str[2]);
+console.log(str.toUpperCase());
+
+const fruit = 'Some fruit';
+console.log(fruit.indexOf('fruit'));
+console.log(fruit.indexOf('q'));
+
+const logg = 'Hello world';
+console.log(logg.slice(6, 11));
 
 
