@@ -474,7 +474,13 @@ console.log(parseInt(test));
 console.log(parseFloat(test));*/
 
 
-let numberOfFilms = prompt('Сколько фильмов Вы уже посмотрели?', '');
+
+
+
+
+
+
+/*let numberOfFilms = prompt('Сколько фильмов Вы уже посмотрели?', '');
 
 
 function start() {
@@ -494,7 +500,7 @@ const personalMovieDB = {
     actors: {},
     genres: [],
     privat: false
-};
+};*/
 
 /*const a = prompt('Один из последних просмотренных фильмов?', ''),
 b = prompt('На сколько оцените его?', ''),
@@ -505,7 +511,7 @@ personalMovieDB.movies[c] = d;
 console.log(personalMovieDB);*/
 
 
-function rememberMyFilms() {
+/*function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
         const a = prompt('Один из последних просмотренных фильмов?', '').trim(),
             b = prompt('На сколько оцените его?', '');
@@ -549,9 +555,38 @@ function writeYourGenres() {
         personalMovieDB.genres[j - 1] = prompt(`Ваш любимый жанр ${j}`);
     }
 }
-writeYourGenres();
+writeYourGenres();*/
 
 
+
+
+
+
+
+function first() {
+    //Do something
+    setTimeout(function () {
+        console.log(1);
+    }, 500);
+}
+function second() {
+    console.log(2);
+}
+
+first();
+second();
+
+
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
+
+function done() {
+    console.log('Я прошла урок!');
+}
+
+learnJS('JavaScript', done);
 
 
 
