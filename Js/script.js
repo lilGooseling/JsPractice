@@ -603,8 +603,12 @@ const options = {
 };
 options.makeTest();
 
+const {border, bg} = options.colors;
+console.log(border);
+console.log(bg);
 
-console.log(Object.keys(options).length);
+
+//console.log(Object.keys(options).length);
 
 //console.log(options.name);
 //delete options.name;
