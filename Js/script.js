@@ -589,7 +589,7 @@ function done() {
 learnJS('JavaScript', done);*/
 
 
-const options = {
+/*const options = {
     name: 'test',
     width: 1024,
     height: 1024,
@@ -605,7 +605,7 @@ options.makeTest();
 
 const {border, bg} = options.colors;
 console.log(border);
-console.log(bg);
+console.log(bg);*/
 
 
 //console.log(Object.keys(options).length);
@@ -627,3 +627,20 @@ for (let key in options) {
     }
 }
 console.log(counter);*/
+
+
+const arr = [2, 3, 6, 8, 10];
+//arr.pop();
+//arr.push(10);
+//console.log(arr);
+/*for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}*/
+/*for (let value of arr) {
+    console.log(value);
+}*/
+
+arr.forEach(function (item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
+
