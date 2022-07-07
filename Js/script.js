@@ -706,7 +706,7 @@ clone.d = 20;
 console.log(add);
 console.log(clone);*/
 
-const oldArray = ['a', 'b', 'c'];
+/*const oldArray = ['a', 'b', 'c'];
 const newArray = oldArray.slice();
 newArray[1] = 'butterfly';
 console.log(newArray);
@@ -734,4 +734,25 @@ const q = {
     two: 2
 };
 const newObj = {...q};
-console.log(newObj);
+console.log(newObj);*/
+
+let str = 'some';
+let strObj = new String(str);
+console.log(typeof (str));
+console.log(typeof (strObj));
+
+console.dir([1,2,3]);
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function () {
+        console.log('hello');
+    }
+};
+const john = {
+    health: 100
+};
+john.__proto__ = soldier;
+console.log(john.armor);
+john.sayHello();
