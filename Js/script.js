@@ -750,9 +750,12 @@ const soldier = {
         console.log('hello');
     }
 };
-const john = {
-    health: 100
-};
-john.__proto__ = soldier;
+
+const john = Object.create(soldier);
+//const john = {
+    //health: 100
+//};
+//john.__proto__ = soldier;
+Object.setPrototypeOf(john, soldier);
 console.log(john.armor);
 john.sayHello();
