@@ -803,14 +803,33 @@ const personalMovieDB = {
             console.log(personalMovieDB)
         }
     },
+    toggleVisibleMyDB: function() {
+        if (personalMovieDB.privat) {
+            personalMovieDB.privat = false;
+        } else {
+            personalMovieDB.privat = true;
+        }
+    },
     writeYourGenres: function() {
         for (let j = 1; j <= 3; j++) {
-            personalMovieDB.genres[j - 1] = prompt(`Ваш любимый жанр ${j}`);
+            let genre = prompt(`Ваш любимый жанр ${j}`);
+
+            if (genre === '' || genre == null) {
+                console.log('Вы ввели некорректные данные');
+                j--;
+            } else {
+                personalMovieDB.genres[j - 1] = genre;
+            }
         }
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Любимый жанр ${i + 1} - это ${item}`);
+        });
     }
 };
 
 personalMovieDB.start();
+//personalMovieDB.toggleVisibleMyDB();
+personalMovieDB.writeYourGenres();
 
 /*const a = prompt('Один из последних просмотренных фильмов?', ''),
 b = prompt('На сколько оцените его?', ''),
