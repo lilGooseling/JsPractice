@@ -761,7 +761,12 @@ console.log(john.armor);
 john.sayHello();*/
 
 
-const personalMovieDB = {
+
+
+
+
+
+/*const personalMovieDB = {
     count: 0,
     movies: {},
     actors: {},
@@ -809,8 +814,8 @@ const personalMovieDB = {
         } else {
             personalMovieDB.privat = true;
         }
-    },
-    writeYourGenres: function() {
+    },*/
+    /*writeYourGenres: function() {
         for (let j = 1; j < 2; j++) {
             //let genre = prompt(`Ваш любимый жанр ${j}`);
 
@@ -837,7 +842,7 @@ const personalMovieDB = {
 
 personalMovieDB.start();
 //personalMovieDB.toggleVisibleMyDB();
-personalMovieDB.writeYourGenres();
+personalMovieDB.writeYourGenres();*/
 
 /*const a = prompt('Один из последних просмотренных фильмов?', ''),
 b = prompt('На сколько оцените его?', ''),
@@ -846,3 +851,30 @@ d = prompt('На сколько оцените его?', '');
 personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 console.log(personalMovieDB);*/
+
+
+
+
+
+
+
+function hello() {
+    console.log('Hello World');
+}
+hello();
+function hi() {
+    console.log('Say hi!');
+}
+hi();
+const arr = [1, 14, 4, 30, 54],
+      sorted = arr.sort(compareNum);
+function compareNum(a, b) {
+    return a-b;
+}
+console.log(sorted);
+
+
+
+
+
+
