@@ -811,14 +811,22 @@ const personalMovieDB = {
         }
     },
     writeYourGenres: function() {
-        for (let j = 1; j <= 3; j++) {
-            let genre = prompt(`Ваш любимый жанр ${j}`);
+        for (let j = 1; j < 2; j++) {
+            //let genre = prompt(`Ваш любимый жанр ${j}`);
 
-            if (genre === '' || genre == null) {
+            //if (genre === '' || genre == null) {
+                //console.log('Вы ввели некорректные данные');
+                //j--;
+            //} else {
+                //personalMovieDB.genres[j - 1] = genre;
+            //}
+            let genres = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase();
+            if (genres === '' || genres == null) {
                 console.log('Вы ввели некорректные данные');
                 j--;
             } else {
-                personalMovieDB.genres[j - 1] = genre;
+                personalMovieDB.genres = genres.split(', ');
+                personalMovieDB.genres.sort();
             }
         }
         personalMovieDB.genres.forEach((item, i) => {
