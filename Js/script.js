@@ -858,7 +858,7 @@ console.log(personalMovieDB);*/
 
 
 
-function hello() {
+/*function hello() {
     console.log('Hello World');
 }
 hello();
@@ -871,10 +871,32 @@ const arr = [1, 14, 4, 30, 54],
 function compareNum(a, b) {
     return a-b;
 }
-console.log(sorted);
+console.log(sorted);*/
 
 
+console.log(typeof (String(null)));
+console.log(typeof (5 + ''));
 
+const num = 5;
+console.log('flowershop/catalog/' + num);
 
+const fontSize = 26 + 'px';
+console.log(fontSize);
+
+console.log(typeof (Number('4')));
+console.log(typeof (+'5'));
+console.log(typeof (parseInt('15px', 10)));
+
+let switcher = null;
+if (switcher) {
+    console.log('working...');
+}
+switcher = 1;
+if (switcher) {
+    console.log('working...');
+}
+
+console.log(typeof (Boolean('4')));
+console.log(typeof (!!'12345'));
 
 
