@@ -912,7 +912,7 @@ logNumber();debugger
 number = 8;
 logNumber();debugger*/
 
-function createCounter() {
+/*function createCounter() {
     let counter = 0;
 
     const myFunction = function () {debugger
@@ -927,6 +927,47 @@ const increment = createCounter();debugger
 const c1 = increment();debugger
 const c2 = increment();debugger
 const c3 = increment();debugger
-console.log(c1, c2, c3);
+console.log(c1, c2, c3);*/
 
+/*{
+    let msg = 'Hello';
+}
+console.log(msg);
 
+for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+        let num = 3;
+    }
+    console.log(num);
+}*/
+
+/*let name = 'John';
+function sayHi() {
+    alert('Hi, ' + name);
+}
+name = 'Pete';
+sayHi();*/
+
+/*function makeWorker() {
+    let name = 'Pete';
+    return function () {
+        alert(name);
+    };
+}
+let name = 'John';
+let work = makeWorker();
+work();*/
+
+/*let phrase = 'Hello';
+function say(name) {
+    alert( ` ${phrase}, ${name}`);
+}
+say('John');*/
+
+function sayHiBye(firstName, lastName) {
+    function getFullName() {
+        return firstName + '' + lastName;
+    }
+    alert('Hello, ' + getFullName() );
+    alert('Bye, ' + getFullName() );
+}
