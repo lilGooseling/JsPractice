@@ -964,10 +964,26 @@ function say(name) {
 }
 say('John');*/
 
-function sayHiBye(firstName, lastName) {
+/*function sayHiBye(firstName, lastName) {
     function getFullName() {
         return firstName + '' + lastName;
     }
     alert('Hello, ' + getFullName() );
     alert('Bye, ' + getFullName() );
-}
+}*/
+
+//Вопросы для примера
+/*let x = 5;
+alert(x++);*/
+
+//[] + false - null + true
+/*console.log([] + false - null + true);*/
+
+/*let y = 1;
+let x = y= 2;
+alert(x);*/
+
+// [] + 1 + 2
+//console.log([] + 1 + 2);
+
+alert('1'[0]);
