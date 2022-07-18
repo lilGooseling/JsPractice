@@ -1002,5 +1002,8 @@ console.log( a == b);*/
 
 //console.log( 'Ёжик' > 'Яблоко');
 
-console.log(0 || '' || 2 || undefined || true || false);
+//console.log(0 || '' || 2 || undefined || true || false);
 
+
+const box = document.getElementById('box');
+console.log(box);
