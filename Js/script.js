@@ -1005,7 +1005,7 @@ console.log( a == b);*/
 //console.log(0 || '' || 2 || undefined || true || false);
 
 
-const box = document.getElementById('box');
+/*const box = document.getElementById('box');
 console.log(box);
 
 const btns = document.getElementsByTagName('button');
@@ -1021,4 +1021,42 @@ hearts.forEach(item => {
 });
 
 const oneHeart = document.querySelector('.heart');
-console.log(oneHeart);
+console.log(oneHeart);*/
+
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circle'),
+      hearts = document.querySelectorAll('.heart'),
+      oneHeart = document.querySelector('.heart'),
+      wrapper = document.querySelector('.wrapper');
+
+//console.dir(box);
+//box.style.backgroundColor = 'plum';
+//box.style.width = '500px';
+
+box.style.cssText = 'background-color: plum; width: 500px';
+
+btns[1].style.borderRadius = '100%';
+btns[3].style.backgroundColor = 'cornflowerblue';
+btns[0].style.backgroundColor = 'blueviolet';
+
+for (let i = 0; i < circles.length; i++) {
+    circles[i].style.backgroundColor = 'powderblue';
+}
+
+hearts.forEach(item => {
+    item.style.backgroundColor = 'palegoldenrod';
+});
+
+const div = document.createElement('div');
+//const text = document.createTextNode('lavender ice cream recipe');
+
+div.classList.add('pink');
+
+//document.body.append(div);
+
+//wrapper.append(div);
+//wrapper.prepend(div);
+//hearts[0].before(div);
+hearts[0].after(div);
+
