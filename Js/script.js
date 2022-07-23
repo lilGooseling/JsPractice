@@ -1055,8 +1055,23 @@ div.classList.add('pink');
 
 //document.body.append(div);
 
-//wrapper.append(div);
+wrapper.append(div);
+//wrapper.appendChild(div);
+
 //wrapper.prepend(div);
 //hearts[0].before(div);
-hearts[0].after(div);
+//hearts[0].after(div);
+//wrapper.insertBefore(div, hearts[0]);
+
+//circles[0].remove();
+//wrapper.removeChild(hearts[1]);
+
+//hearts[0].replaceWith(circles[0]);
+//wrapper.replaceChild(circles[0], hearts[0]);
+
+div.innerHTML = '<h1>Hello World</h1>';
+//div.textContent = 'Hello';
+
+div.insertAdjacentHTML("afterend", '<h2>Hello</h2>');
+
 
