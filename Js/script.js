@@ -1023,7 +1023,7 @@ hearts.forEach(item => {
 const oneHeart = document.querySelector('.heart');
 console.log(oneHeart);*/
 
-const box = document.getElementById('box'),
+/*const box = document.getElementById('box'),
       btns = document.getElementsByTagName('button'),
       circles = document.getElementsByClassName('circle'),
       hearts = document.querySelectorAll('.heart'),
@@ -1069,9 +1069,26 @@ wrapper.append(div);
 //hearts[0].replaceWith(circles[0]);
 //wrapper.replaceChild(circles[0], hearts[0]);
 
-div.innerHTML = '<h1>Hello World</h1>';
+//div.innerHTML = '<h1>Hello World</h1>';
 //div.textContent = 'Hello';
 
-div.insertAdjacentHTML("afterend", '<h2>Hello</h2>');
+//div.insertAdjacentHTML("afterend", '<h2>Hello</h2>');*/
 
 
+const btn = document.querySelector('button');
+
+/*btn.onclick = function () {
+    alert('Click');
+};*/
+
+/*btn.addEventListener('click', () => {
+    alert('Click');
+});*/
+/*btn.addEventListener('click', () => {
+    alert(' Second click');
+});*/
+btn.addEventListener('click', (e) => {
+    console.log(e.target);
+    e.target.remove();
+    //console.log('Hover');
+});
