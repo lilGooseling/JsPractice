@@ -1247,7 +1247,7 @@ const result = getTotalProgressByRecursion(students);
 console.log(result[0]/result[1]);
 
 
-window.addEventListener('DOMContentLoaded', () => {
+/*window.addEventListener('DOMContentLoaded', () => {
     const box = document.querySelector('.box');
 
     box.addEventListener('touchstart', (e) => {
@@ -1256,7 +1256,7 @@ window.addEventListener('DOMContentLoaded', () => {
         //console.log(e.touches);
         //console.log(e.targetTouches);
         console.log(e.changedTouches);
-    });
+    });*/
 
 
     /*box.addEventListener('touchmove', (e) => {
@@ -1269,7 +1269,13 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log('End');
     });*/
 
-});
+//});
+
+
+
+
+const p = document.querySelectorAll('p');
+console.log(p);
 
 
 
