@@ -1296,10 +1296,10 @@ let userName;
 let userKey;
 console.log(userName ?? userKey ?? 'User');*/
 
-const box = document.querySelector('.box2');
+/*const box = document.querySelector('.box2');
 const block = document.querySelector('.block');
 
-console.log(block);
+console.log(block);*/
 
 /*if (block) {
     console.log(block.textContent);
@@ -1308,7 +1308,7 @@ console.log(block);
 //console.log(block?.textContent);
 //console.log(1 + 2);
 
-const userData = {
+/*const userData = {
     name: 'Ivan',
     age: null,
     say: function () {
@@ -1317,10 +1317,33 @@ const userData = {
 };
 
 userData.say();
-userData.hey?.();
+userData.hey?.();*/
 /*if ( userData && userData.skills && userData.skills.js) {
     console.log(userData.skills.js);
 }*/
-console.log(userData.skills?.js);
+//console.log(userData.skills?.js);
+
+
+
+const boxesQuery = document.querySelectorAll('.box3');
+const boxesGet = document.getElementsByClassName('box3');
+
+boxesQuery.forEach(box => {
+    if (box.matches('.this')) console.log('this one');
+});
+console.log(boxesQuery[0].closest('.wrapper'));
+
+boxesQuery[0].remove();
+boxesGet[0].remove();
+
+for (let i = 0; i < 5; i++) {
+    const div = document.createElement('div');
+    div.classList.add('box3');
+    document.body.append(div);
+}
+
+console.log(boxesQuery);
+console.log(boxesGet);
+console.log(Array.from(boxesGet));
 
 
