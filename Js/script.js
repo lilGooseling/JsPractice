@@ -1325,7 +1325,7 @@ userData.hey?.();*/
 
 
 
-const boxesQuery = document.querySelectorAll('.box3');
+/*const boxesQuery = document.querySelectorAll('.box3');
 const boxesGet = document.getElementsByClassName('box3');
 
 boxesQuery.forEach(box => {
@@ -1344,6 +1344,37 @@ for (let i = 0; i < 5; i++) {
 
 console.log(boxesQuery);
 console.log(boxesGet);
-console.log(Array.from(boxesGet));
+console.log(Array.from(boxesGet));*/
+
+
+
+const obj = {
+    'name': 'Test',
+    //[Symbol('id')]: 1
+    [Symbol('id')]: 1,
+    getId: function () {
+        return this[id];
+    }
+};
+
+let id = Symbol("id");
+//obj[id] = 1;
+console.log(Object.getOwnPropertySymbols(obj));
+console.log(obj[Object.getOwnPropertySymbols(obj)[0]]);
+
+//for (let value in obj) console.log(value);
+
+const myAwesomeDb = {
+    movies: [],
+    actors: [],
+    //[Symbol('id')]: 123
+    [Symbol.for('id')]: 123
+};
+
+// Сторонний код библиотеки
+
+myAwesomeDb.id ='141536';
+console.log(myAwesomeDb[Symbol.for('id')]);
+console.log(myAwesomeDb);
 
 
