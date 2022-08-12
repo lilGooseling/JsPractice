@@ -1348,7 +1348,7 @@ console.log(Array.from(boxesGet));*/
 
 
 
-const obj = {
+/*const obj = {
     'name': 'Test',
     //[Symbol('id')]: 1
     [Symbol('id')]: 1,
@@ -1397,7 +1397,10 @@ console.log(Object.getOwnPropertyDescriptor(user, birthday));
 Object.defineProperties(user, {
     name: {writable: false},
     surname: {writable: false}
-});
+});*/
+
+
+
 
 
 //Object.defineProperty(user, 'birthday', {value: prompt('Date?'), enumerable: true, configurable: true});
@@ -1411,3 +1414,38 @@ Object.defineProperties(user, {
 //writable
 //enumerable
 //configurable
+
+
+
+const user = {
+    name: 'Alex',
+    surname: 'Smith',
+    birthday: '20/04/1993',
+    showMyPublicData: function () {
+        console.log(`${this.name} ${this.surname}`);
+    }
+};
+
+for (const key in user) {
+    console.log(user[key]);
+}
+
+/*for (const key of user) {
+    console.log(key);
+}*/
+
+
+const arr = ['b', 'a', 'c'];
+
+for (const key in arr) {
+    console.log(arr[key]);
+}
+
+for (const key of arr) {
+    console.log(key);
+}
+
+/*const str = 'string';
+for (const key in str) {
+    console.log(str[key]);
+}*/
