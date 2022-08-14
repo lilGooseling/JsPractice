@@ -1455,7 +1455,7 @@ for (const key in str) {
 
 
 
-const salaries = {
+/*onst salaries = {
     john: 500,
     ivan: 1000,
     ann: 5000,
@@ -1482,4 +1482,40 @@ salaries[Symbol.iterator] = function () {
 
 for (let res of salaries) {
     console.log(res);
-}
+}*/
+
+
+/*const user = {
+    1: 'Alex',
+    surname: 'Smith',
+    birthday: '20/04/2022',
+    showMyPublicData: function () {
+        console.log(`${this.name} ${this.surname}`);
+    }
+};
+console.log(typeof(Object.keys(user)[0]));*/
+
+
+const shops = [
+    {rice: 500},
+    {oil: 200},
+    {bread: 50}
+];
+
+const budget = [5000, 15000, 25000];
+
+const map = new Map();
+
+shops.forEach((shop, i) => {
+    map.set(shop, budget[i]);
+});
+
+console.log(map.get(shops[0]));
+console.log(map.has(shops[0]));
+//map.delete(key);
+//map.clear();
+//map.size;
+
+//map.set(shops[0], 5000);
+//map.set(shops[1], 15000);
+//map.set(shops[2], 25000);
