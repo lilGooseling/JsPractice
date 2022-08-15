@@ -1485,15 +1485,20 @@ for (let res of salaries) {
 }*/
 
 
-/*const user = {
-    1: 'Alex',
+const user = {
+    name: 'Alex',
     surname: 'Smith',
     birthday: '20/04/2022',
     showMyPublicData: function () {
         console.log(`${this.name} ${this.surname}`);
     }
 };
-console.log(typeof(Object.keys(user)[0]));*/
+//console.log(typeof(Object.keys(user)[0]));
+const userMap = new Map(Object.entries(user));
+console.log(userMap);
+
+const newUserObj = Object.fromEntries(userMap);
+console.log(newUserObj);
 
 
 const shops = [
@@ -1504,14 +1509,17 @@ const shops = [
 
 const budget = [5000, 15000, 25000];
 
-const map = new Map();
+const map = new Map([
+    [{paper: 400}, 8000]
+]);
 
 shops.forEach((shop, i) => {
     map.set(shop, budget[i]);
 });
 
-console.log(map.get(shops[0]));
-console.log(map.has(shops[0]));
+//console.log(map);
+//console.log(map.get(shops[0]));
+//console.log(map.has(shops[0]));
 //map.delete(key);
 //map.clear();
 //map.size;
@@ -1519,3 +1527,29 @@ console.log(map.has(shops[0]));
 //map.set(shops[0], 5000);
 //map.set(shops[1], 15000);
 //map.set(shops[2], 25000);
+//map.keys();
+
+
+/*console.log(map.keys());
+for (let shop of map.keys()) {
+    console.log(shop);
+}
+
+const goods = [];
+for (let shop of map.keys()) {
+    goods.push(Object.keys(shop)[0])
+}
+console.log(goods);
+
+for (let price of map.values()) {
+    console.log(price);
+}
+
+for (let [shop, price] of map.entries()) {
+    console.log(price, shop);
+}
+
+map.forEach((value, key, map) => {
+    console.log(key, value);
+});*/
+
