@@ -1553,13 +1553,17 @@ map.forEach((value, key, map) => {
     console.log(key, value);
 });*/
 
+
+
+
+
 //const arr = [1, 1, 2, 2, 4, 5, 6, 5];
-const arr = ['Alex', 'Ann', 'Oleg', 'Alex'];
+/*const arr = ['Alex', 'Ann', 'Oleg', 'Alex'];
 
 function unique(arr) {
     return Array.from(new Set(arr));
 }
-console.log(unique(arr));
+console.log(unique(arr));*/
 
 
 //const set = new Set(arr);
@@ -1581,3 +1585,15 @@ console.log(unique(arr));
 //console.log(set.keys());
 //console.log(set.entries());
 
+
+
+//const bigint = 12345678909876543211234567890n;
+//const sameBigint = BigInt(12345678909876543211234567890);
+//console.log(typeof(bigint));
+
+console.log(1n + 2n);
+
+let bigint = 1n;
+let number = 2;
+console.log(bigint + BigInt(number));
+console.log(Number(bigint) + number);
