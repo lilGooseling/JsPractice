@@ -1591,9 +1591,21 @@ console.log(unique(arr));*/
 //const sameBigint = BigInt(12345678909876543211234567890);
 //console.log(typeof(bigint));
 
-console.log(1n + 2n);
+/*console.log(1n + 2n);
 
 let bigint = 1n;
 let number = 2;
 console.log(bigint + BigInt(number));
-console.log(Number(bigint) + number);
+console.log(Number(bigint) + number);*/
+
+
+const btns = document.querySelectorAll('button');
+console.log(btns[0].classList.length);
+console.log(btns[0].classList.item(0));
+console.log(btns[1].classList.add('green'));
+console.log(btns[0].classList.remove('blue'));
+console.log(btns[0].classList.toggle('blue'));
+
+if (btns[1].classList.contains('green')) {
+    console.log('green');
+}
