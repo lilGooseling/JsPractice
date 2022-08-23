@@ -1603,6 +1603,9 @@ const btns = document.querySelectorAll('button');
 console.log(btns[0].classList.length);
 console.log(btns[0].classList.item(0));
 console.log(btns[1].classList.add('green'));
+console.log(btns[3].classList.add('yellow'));
+console.log(btns[5].classList.add('purple'));
+console.log(btns[7].classList.add('sky'));
 console.log(btns[0].classList.remove('blue'));
 console.log(btns[0].classList.toggle('blue'));
 
