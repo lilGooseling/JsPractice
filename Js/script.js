@@ -1599,8 +1599,10 @@ console.log(bigint + BigInt(number));
 console.log(Number(bigint) + number);*/
 
 
-const btns = document.querySelectorAll('button');
-console.log(btns[0].classList.length);
+const btns = document.querySelectorAll('button'),
+      wrapper = document.querySelector('.btn-block');
+
+/*console.log(btns[0].classList.length);
 console.log(btns[0].classList.item(0));
 console.log(btns[1].classList.add('green'));
 console.log(btns[3].classList.add('yellow'));
@@ -1611,4 +1613,13 @@ console.log(btns[0].classList.toggle('blue'));
 
 if (btns[1].classList.contains('green')) {
     console.log('green');
-}
+}*/
+
+btns[0].addEventListener('click', () => {
+    if (!btns[1].classList.contains('green')) {
+        btns[1].classList.add('green');
+    } else {
+        btns[1].classList.remove('green');
+    }
+});
+//console.log(btns[0].className);
