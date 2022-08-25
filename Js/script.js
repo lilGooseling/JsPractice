@@ -1623,3 +1623,19 @@ btns[0].addEventListener('click', () => {
     }
 });
 //console.log(btns[0].className);
+
+wrapper.addEventListener('click', (event) => {
+    /*if (event.target && event.target.tagName === 'BUTTON') {
+        console.log('Hello');
+    }*/
+    /*if (event.target && event.target.classList.contains('blue')) {
+        console.log('Hello');
+    }*/
+    if (event.target && event.target.matches('button.green')) {
+        console.log('Hello');
+    }
+});
+
+const btn = document.createElement('button');
+btn.classList.add('green');
+wrapper.append(btn);
