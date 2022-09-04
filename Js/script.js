@@ -1599,8 +1599,8 @@ console.log(bigint + BigInt(number));
 console.log(Number(bigint) + number);*/
 
 
-const btns = document.querySelectorAll('button'),
-      wrapper = document.querySelector('.btn-block');
+/*const btns = document.querySelectorAll('button'),
+      wrapper = document.querySelector('.btn-block');*/
 
 /*console.log(btns[0].classList.length);
 console.log(btns[0].classList.item(0));
@@ -1615,27 +1615,59 @@ if (btns[1].classList.contains('green')) {
     console.log('green');
 }*/
 
-btns[0].addEventListener('click', () => {
+/*btns[0].addEventListener('click', () => {
     if (!btns[1].classList.contains('green')) {
         btns[1].classList.add('green');
     } else {
         btns[1].classList.remove('green');
     }
-});
+});*/
 //console.log(btns[0].className);
 
-wrapper.addEventListener('click', (event) => {
+/*wrapper.addEventListener('click', (event) => {
     /*if (event.target && event.target.tagName === 'BUTTON') {
         console.log('Hello');
     }*/
     /*if (event.target && event.target.classList.contains('blue')) {
         console.log('Hello');
     }*/
-    if (event.target && event.target.matches('button.green')) {
+    /*if (event.target && event.target.matches('button.green')) {
         console.log('Hello');
     }
+});*/
+
+/*const btn = document.createElement('button');
+btn.classList.add('green');
+wrapper.append(btn);*/
+
+
+
+
+
+
+/*const timerId = setTimeout(function () {
+    console.log('Hello');
+}, 2000);*/
+
+/*const timerId = setTimeout(function (text) {
+    console.log(text);
+}, 2000, 'Hello');*/
+
+
+const btn = document.querySelector('.btn');
+let timerId,
+    i = 0;
+
+
+btn.addEventListener('click', () => {
+    timerId = setInterval(logger, 2000);
 });
 
-const btn = document.createElement('button');
-btn.classList.add('green');
-wrapper.append(btn);
+
+function logger() {
+    if (i===3) {
+        clearInterval(timerId);
+    }
+    console.log('text');
+    i++;
+}
