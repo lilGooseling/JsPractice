@@ -1802,10 +1802,33 @@ console.log(readMassages.has(messages[0]));*/
 //const now = new Date('2022-09-08');
 //new Date.parse('2022-09-08');
 
-let start = new Date();
+/*let start = new Date();
 for (let i = 0; i < 100000; i++) {
     let some = i**3;
 }
 let end = new Date();
-alert(`Цикл отработал за ${end - start} миллисекунд`);
+alert(`Цикл отработал за ${end - start} миллисекунд`);*/
 
+
+
+const box = document.querySelector('.box6'),
+      btn = document.querySelector('button');
+
+//const width = box.clientWidth;
+//const height = box.clientHeight;
+
+//console.log(width, height);
+
+//const width = box.offsetWidth;
+//const height = box.offsetHeight;
+
+//console.log(width, height);
+
+const width = box.scrollWidth;
+const height = box.scrollHeight;
+
+console.log(width, height);
+
+btn.addEventListener('click', () => {
+    box.style.height = box.scrollHeight + 'px';
+});
