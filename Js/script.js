@@ -1830,5 +1830,19 @@ const height = box.scrollHeight;
 console.log(width, height);
 
 btn.addEventListener('click', () => {
-    box.style.height = box.scrollHeight + 'px';
+    //box.style.height = box.scrollHeight + 'px';
+    console.log(box.scrollTop);
 });
+
+//console.log(box.getBoundingClientRect());
+console.log(box.getBoundingClientRect().top);
+
+const style = window.getComputedStyle(box);
+//console.log(style);
+console.log(style.display);
+
+//console.log(document.documentElement.clientWidth);
+console.log(document.documentElement.scrollTop);
+
+//window.scrollBy(x, y)
+//window.scrollTo(x, y)
