@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /*.box {
     width: 150px;
     height: 150px;
@@ -162,7 +168,7 @@ a {
     background-color: plum;
     border: none;
 }*/
-.box6 {
+/*.box6 {
     box-sizing: border-box;
     width: 400px;
     height: 350px;
@@ -170,8 +176,8 @@ a {
     margin: 0 auto;
     margin-top: 50px;
     padding: 10px;
-}
-.plum {
+}*/
+/*.plum {
     width: 100px;
     height: 40px;
     display: block;
@@ -181,4 +187,13 @@ a {
     border: none;
     color: #fff;
     border-radius: 10px;
+}*/
+.box7 {
+    width: 300px;
+    height: 250px;
+    margin: 40px auto;
+    padding: 50px;
+    border: 2px solid mediumpurple;
+    text-align: center;
+    font-size: 20px;
 }

@@ -1811,8 +1811,8 @@ alert(`Цикл отработал за ${end - start} миллисекунд`);
 
 
 
-const box = document.querySelector('.box6'),
-      btn = document.querySelector('button');
+/*const box = document.querySelector('.box6'),
+      btn = document.querySelector('button');*/
 
 //const width = box.clientWidth;
 //const height = box.clientHeight;
@@ -1824,25 +1824,37 @@ const box = document.querySelector('.box6'),
 
 //console.log(width, height);
 
-const width = box.scrollWidth;
-const height = box.scrollHeight;
+//const width = box.scrollWidth;
+//const height = box.scrollHeight;
 
-console.log(width, height);
+//console.log(width, height);
 
-btn.addEventListener('click', () => {
+/*btn.addEventListener('click', () => {
     //box.style.height = box.scrollHeight + 'px';
     console.log(box.scrollTop);
-});
+})*/
 
 //console.log(box.getBoundingClientRect());
-console.log(box.getBoundingClientRect().top);
+//console.log(box.getBoundingClientRect().top);
 
-const style = window.getComputedStyle(box);
+//const style = window.getComputedStyle(box);
 //console.log(style);
-console.log(style.display);
+//console.log(style.display);
 
 //console.log(document.documentElement.clientWidth);
-console.log(document.documentElement.scrollTop);
+//console.log(document.documentElement.scrollTop);
 
 //window.scrollBy(x, y)
 //window.scrollTo(x, y)
+
+const box = document.querySelector('.box7');
+
+let observer = new MutationObserver(mutationRecords => {
+    console.log(mutationRecords);
+});
+
+observer.observe(box, {
+    childList: true
+});
+
+observer.disconnect();
