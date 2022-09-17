@@ -1863,7 +1863,7 @@ observer.disconnect();*/
 /*const num = new Number(3);
 console.log(num);*/
 
-function User(name, id) {
+/*function User(name, id) {
     this.name = name;
     this.id = id;
     this.human = true;
@@ -1885,4 +1885,63 @@ ivan.hello();
 alex.hello();
 
 console.log(ivan);
-console.log(alex);
+console.log(alex);*/
+
+
+
+//1) Обычная функция: This = window, но усли Use strict - undefined
+
+function showThis() {
+    console.log(this);
+}
+showThis();
+
+function showThisNew(a, b) {
+    function sum() {
+        console.log(this);
+        return a + b;
+    }
+    console.log(sum());
+}
+showThisNew(4, 5);
+
+//2 Контекст у методов объекта - сам объект
+
+const obj = {
+    a: 20,
+    b: 15,
+    sum: function () {
+        console.log(this);
+    }
+};
+obj.sum();
+
+
+//3 this в конструкторах и классах - это новый экземпляр объекта
+
+
+function User(name, id) {
+    this.name = name;
+    this.id = id;
+    this.human = true;
+    this.hello = function () {
+        console.log('Hello' + this.name);
+    };
+}
+let ivan = new User('Ivan', 23);
+ivan.hello();
+
+
+//4
+
+function saySurname() {
+    console.log(this);
+    console.log(this.surname);
+}
+
+const user = {
+    surname: 'Brown'
+};
+
+saySurname.call(user);
+saySurname.apply(user);
