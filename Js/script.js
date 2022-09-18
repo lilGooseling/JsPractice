@@ -1907,14 +1907,14 @@ showThisNew(4, 5);
 
 //2 Контекст у методов объекта - сам объект
 
-const obj = {
+/*const obj = {
     a: 20,
     b: 15,
     sum: function () {
         console.log(this);
     }
 };
-obj.sum();
+obj.sum();*/
 
 
 //3 this в конструкторах и классах - это новый экземпляр объекта
@@ -1932,16 +1932,65 @@ let ivan = new User('Ivan', 23);
 ivan.hello();
 
 
-//4
+//4 ручная привязка this: call, apply, bind
 
-function saySurname() {
+/*function saySurname() {
     console.log(this);
     console.log(this.surname);
+}*/
+
+function saySurname(name) {
+    console.log(this);
+    console.log(this.surname + name);
 }
 
 const user = {
     surname: 'Brown'
 };
 
-saySurname.call(user);
-saySurname.apply(user);
+saySurname.call(user, 'Harry');
+saySurname.apply(user, ['Harry']);
+
+
+
+function count(num) {
+    return this*num;
+}
+
+//const double = count.bind(2);
+//console.log(double(3));
+//console.log(double(23));
+
+
+
+
+const btn = document.querySelector('button');
+
+/*btn.addEventListener('click', function () {
+    console.log(this);
+    this.style.backgroundColor = 'yellow';
+});*/
+
+const obj = {
+    num: 5,
+    sayNumber: function () {
+        const say = () => {
+            console.log(this);
+            console.log(this.num);
+        };
+        say();
+    }
+};
+obj.sayNumber();
+
+/*const double = (a) => {
+    return a*2;
+};*/
+// Укороченная запись: const double = (a) => a*2;
+const double = a => a*2;
+console.log(double(4));
+
+
+btn.addEventListener('click', (e) =>  {
+    e.target.style.backgroundColor = 'green';
+});
