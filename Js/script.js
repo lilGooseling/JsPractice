@@ -1891,7 +1891,7 @@ console.log(alex);*/
 
 //1) Обычная функция: This = window, но усли Use strict - undefined
 
-function showThis() {
+/*function showThis() {
     console.log(this);
 }
 showThis();
@@ -1905,7 +1905,7 @@ function showThisNew(a, b) {
 }
 showThisNew(4, 5);
 
-//2 Контекст у методов объекта - сам объект
+//2 Контекст у методов объекта - сам объект*/
 
 /*const obj = {
     a: 20,
@@ -1920,7 +1920,7 @@ obj.sum();*/
 //3 this в конструкторах и классах - это новый экземпляр объекта
 
 
-function User(name, id) {
+/*function User(name, id) {
     this.name = name;
     this.id = id;
     this.human = true;
@@ -1929,7 +1929,7 @@ function User(name, id) {
     };
 }
 let ivan = new User('Ivan', 23);
-ivan.hello();
+ivan.hello();*/
 
 
 //4 ручная привязка this: call, apply, bind
@@ -1939,7 +1939,7 @@ ivan.hello();
     console.log(this.surname);
 }*/
 
-function saySurname(name) {
+/*function saySurname(name) {
     console.log(this);
     console.log(this.surname + name);
 }
@@ -1955,7 +1955,7 @@ saySurname.apply(user, ['Harry']);
 
 function count(num) {
     return this*num;
-}
+}*/
 
 //const double = count.bind(2);
 //console.log(double(3));
@@ -1964,14 +1964,14 @@ function count(num) {
 
 
 
-const btn = document.querySelector('button');
+//const btn = document.querySelector('button');
 
 /*btn.addEventListener('click', function () {
     console.log(this);
     this.style.backgroundColor = 'yellow';
 });*/
 
-const obj = {
+/*const obj = {
     num: 5,
     sayNumber: function () {
         const say = () => {
@@ -1981,16 +1981,52 @@ const obj = {
         say();
     }
 };
-obj.sayNumber();
+obj.sayNumber();*/
 
 /*const double = (a) => {
     return a*2;
 };*/
 // Укороченная запись: const double = (a) => a*2;
-const double = a => a*2;
+/*const double = a => a*2;
 console.log(double(4));
 
 
 btn.addEventListener('click', (e) =>  {
     e.target.style.backgroundColor = 'green';
-});
+});*/
+
+
+
+
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+
+    calcArea() {
+        return this.height*this.width;
+    }
+}
+
+class ColoredRectangleWithText extends Rectangle{
+    constructor(height, width, text, bgColor) {
+        super(height, width);
+        this.text = text;
+        this.bgColor = bgColor;
+    }
+
+    showMyProps() {
+        console.log(`Текст: ${this.text}, цвет: ${this.bgColor}`);
+    }
+}
+const div = new ColoredRectangleWithText(25, 10, 'Hello', 'plum');
+div.showMyProps();
+console.log(div.calcArea());
+
+
+
+const square = new Rectangle(10, 10);
+const long = new Rectangle(20, 100);
+console.log(square.calcArea());
+console.log(long.calcArea());
