@@ -1998,7 +1998,7 @@ btn.addEventListener('click', (e) =>  {
 
 
 
-class Rectangle {
+/*class Rectangle {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -2029,4 +2029,22 @@ console.log(div.calcArea());
 const square = new Rectangle(10, 10);
 const long = new Rectangle(20, 100);
 console.log(square.calcArea());
-console.log(long.calcArea());
+console.log(long.calcArea());*/
+
+
+
+
+const log = function (a, b, ...rest) {
+    console.log(a, b, rest);
+};
+
+log('basic', 'other', 'operator', 'usage');
+
+
+function calcOrDouble(number, basis = 2) {
+    //basis = basis || 2;
+    console.log(number*basis);
+}
+calcOrDouble(3);
+
+
