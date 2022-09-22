@@ -2034,7 +2034,7 @@ console.log(long.calcArea());*/
 
 
 
-const log = function (a, b, ...rest) {
+/*const log = function (a, b, ...rest) {
     console.log(a, b, rest);
 };
 
@@ -2045,6 +2045,24 @@ function calcOrDouble(number, basis = 2) {
     //basis = basis || 2;
     console.log(number*basis);
 }
-calcOrDouble(3);
+calcOrDouble(3);*/
 
+
+const persone = {
+    name: 'Alex',
+    tel: '+123456789',
+    parents: {
+        mom: 'Olga',
+        dad: 'Mike'
+    }
+};
+
+//console.log(JSON.stringify(persone));
+//console.log(JSON.parse(JSON.stringify(persone)));
+
+const clone = JSON.parse(JSON.stringify(persone));
+
+clone.parents.mom = 'Ann';
+console.log(persone);
+console.log(clone);
 
