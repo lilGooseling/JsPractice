@@ -2048,21 +2048,43 @@ function calcOrDouble(number, basis = 2) {
 calcOrDouble(3);*/
 
 
-const persone = {
+/*const persone = {
     name: 'Alex',
     tel: '+123456789',
     parents: {
         mom: 'Olga',
         dad: 'Mike'
     }
-};
+};*/
 
 //console.log(JSON.stringify(persone));
 //console.log(JSON.parse(JSON.stringify(persone)));
 
-const clone = JSON.parse(JSON.stringify(persone));
+/*const clone = JSON.parse(JSON.stringify(persone));
 
 clone.parents.mom = 'Ann';
 console.log(persone);
-console.log(clone);
+console.log(clone);*/
+
+
+
+// Ajax и общение с сервиром, XMLHttpRequest
+
+
+const inputRub = document.querySelector('#rub'),
+      inputUsd = document.querySelector('#usd');
+
+inputRub.addEventListener('input', () => {
+    const request = new XMLHttpRequest();
+
+    request.open('GET', 'js/current.json');
+    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    request.send();
+
+    //status
+    //statusText
+    //response
+    //readyState
+});
+
 
