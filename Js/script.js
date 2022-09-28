@@ -2071,7 +2071,7 @@ console.log(clone);*/
 // Ajax и общение с сервиром, XMLHttpRequest
 
 
-const inputRub = document.querySelector('#rub'),
+/*const inputRub = document.querySelector('#rub'),
       inputUsd = document.querySelector('#usd');
 
 inputRub.addEventListener('input', () => {
@@ -2079,7 +2079,7 @@ inputRub.addEventListener('input', () => {
 
     request.open('GET', 'js/current.json');
     request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    request.send();
+    request.send();*/
 
     //status
     //statusText
@@ -2098,7 +2098,7 @@ inputRub.addEventListener('input', () => {
     })*/
 
 
-    request.addEventListener('load', () => {
+    /*request.addEventListener('load', () => {
         if (request.status === 200) {
             console.log(request.response);
 
@@ -2107,11 +2107,36 @@ inputRub.addEventListener('input', () => {
         } else {
             inputUsd.value = 'Что то пошло не так';
         }
-    })
+    })*/
 
     // readystatechange событие
     // load событие
 
-});
+
+
+    //Promise
+
+
+
+    //Дерево коллбэков
+
+    console.log('Запрос данных...');
+
+    setTimeout(() => {
+       console.log('Подготовка данных...');
+
+        const product = {
+            name: 'TV',
+            price: 2000
+        };
+
+        setTimeout(() => {
+            product.status = 'order';
+            console.log(product);
+        }, 2000);
+    }, 2000);
+
+
+
 
 
