@@ -2122,7 +2122,36 @@ inputRub.addEventListener('input', () => {
 
     console.log('Запрос данных...');
 
-    setTimeout(() => {
+    const req = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log('Подготовка данных...');
+
+            const product = {
+                name: 'TV',
+                price: 2000
+            };
+
+            resolve(product);
+        }, 2000);
+    });
+
+    req.then((product) => {
+        /*setTimeout(() => {
+            product.status = 'order';
+            console.log(product);
+        }, 2000);*/
+        return new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                product.status = 'order';
+                resolve(product);
+            }, 2000);
+        });
+    }).then(data => {
+        console.log(data);
+    });
+
+
+    /*setTimeout(() => {
        console.log('Подготовка данных...');
 
         const product = {
@@ -2134,7 +2163,7 @@ inputRub.addEventListener('input', () => {
             product.status = 'order';
             console.log(product);
         }, 2000);
-    }, 2000);
+    }, 2000);*/
 
 
 
