@@ -2120,7 +2120,7 @@ inputRub.addEventListener('input', () => {
 
     //Дерево коллбэков
 
-    console.log('Запрос данных...');
+    /*console.log('Запрос данных...');
 
     const req = new Promise(function (resolve, reject) {
         setTimeout(() => {
@@ -2133,13 +2133,9 @@ inputRub.addEventListener('input', () => {
 
             resolve(product);
         }, 2000);
-    });
+    });*/
 
-    req.then((product) => {
-        /*setTimeout(() => {
-            product.status = 'order';
-            console.log(product);
-        }, 2000);*/
+    /*req.then((product) => {
         return new Promise(function (resolve, reject) {
             setTimeout(() => {
                 product.status = 'order';
@@ -2147,9 +2143,15 @@ inputRub.addEventListener('input', () => {
             }, 2000);
         });
     }).then(data => {
+        data.modify = true;
+        return data;
+    }).then(data => {
         console.log(data);
-    });
-
+    }).catch(() => {
+        console.error('Произошла ошибка');
+    }).finally(() => {
+        console.log('Finally')
+    });*/
 
     /*setTimeout(() => {
        console.log('Подготовка данных...');
@@ -2164,6 +2166,26 @@ inputRub.addEventListener('input', () => {
             console.log(product);
         }, 2000);
     }, 2000);*/
+
+
+
+    const test = time => {
+        return new Promise(resolve => {
+            setTimeout(() => resolve(), time);
+        });
+    };
+
+    //test(1000).then(() => console.log('1000 ms'));
+    //test(2000).then(() => console.log('2000 ms'));
+
+    /*Promise.all([test(1000), test(2000)]).then(() => {
+        console.log('All');
+    });*/
+
+    Promise.race([test(1000), test(2000)]).then(() => {
+    console.log('All');
+});
+
 
 
 
