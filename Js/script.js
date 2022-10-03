@@ -2169,11 +2169,11 @@ inputRub.addEventListener('input', () => {
 
 
 
-    const test = time => {
+    /*const test = time => {
         return new Promise(resolve => {
             setTimeout(() => resolve(), time);
         });
-    };
+    };*/
 
     //test(1000).then(() => console.log('1000 ms'));
     //test(2000).then(() => console.log('2000 ms'));
@@ -2182,12 +2182,51 @@ inputRub.addEventListener('input', () => {
         console.log('All');
     });*/
 
-    Promise.race([test(1000), test(2000)]).then(() => {
+    /*Promise.race([test(1000), test(2000)]).then(() => {
     console.log('All');
+});*/
+
+
+/*fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: "POST",
+        body: JSON.stringify({name: 'Alex'}),
+        headers: {
+            'Content-type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(json => console.log(json));*/
+
+
+
+
+// Методы перебора массивов
+// 1.Filter
+
+
+const names = ['Ivan', 'Ann', 'Sara', 'Alexandr'];
+
+const shortNames = names.filter(function (name) {
+    return name.length < 5;
 });
 
+console.log(shortNames);
+
+//2.Map
+
+/*const answers = ['IvAn', 'ANNE', 'Hello'];
+const results = answers.map(item => {
+    return item.toLowerCase();
+});
+console.log(results);*/
+
+let answers = ['IvAn', 'ANNE', 'Hello'];
+answers = answers.map(item => item.toLowerCase());
+console.log(answers);
 
 
+//Some/ every
 
-
-
+const some = [2, 'hello', 'hi'];
+//console.log(some.some(item => typeof(item) === 'number'));
+console.log(some.every(item => typeof(item) === 'number'));
