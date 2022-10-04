@@ -2204,13 +2204,13 @@ inputRub.addEventListener('input', () => {
 // 1.Filter
 
 
-const names = ['Ivan', 'Ann', 'Sara', 'Alexandr'];
+/*const names = ['Ivan', 'Ann', 'Sara', 'Alexandr'];
 
 const shortNames = names.filter(function (name) {
     return name.length < 5;
 });
 
-console.log(shortNames);
+console.log(shortNames);*/
 
 //2.Map
 
@@ -2220,13 +2220,39 @@ const results = answers.map(item => {
 });
 console.log(results);*/
 
-let answers = ['IvAn', 'ANNE', 'Hello'];
+/*let answers = ['IvAn', 'ANNE', 'Hello'];
 answers = answers.map(item => item.toLowerCase());
-console.log(answers);
+console.log(answers);*/
 
 
 //Some/ every
 
-const some = [2, 'hello', 'hi'];
+/*const some = [2, 'hello', 'hi'];
 //console.log(some.some(item => typeof(item) === 'number'));
-console.log(some.every(item => typeof(item) === 'number'));
+console.log(some.every(item => typeof(item) === 'number'));*/
+
+
+
+//Reduce
+
+/*const arr = [4, 5, 1, 3, 2, 6];
+const res = arr.reduce((sum, current) => sum + current);
+console.log(res);*/
+
+const arr = ['apple', 'pear', 'plum'];
+const res = arr.reduce((sum, current) => `${sum}, ${current}`);
+console.log(res);
+
+
+
+const obj = {
+    ivan: 'person',
+    ann: 'person',
+    dog: 'animal',
+    cat: 'animal'
+};
+
+const newArr = Object.entries(obj)
+    .filter(item => item[1] === 'person')
+    .map(item => item[0]);
+console.log(newArr);
