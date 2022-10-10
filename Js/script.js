@@ -2239,7 +2239,7 @@ console.log(some.every(item => typeof(item) === 'number'));*/
 const res = arr.reduce((sum, current) => sum + current);
 console.log(res);*/
 
-const arr = ['apple', 'pear', 'plum'];
+/*const arr = ['apple', 'pear', 'plum'];
 const res = arr.reduce((sum, current) => `${sum}, ${current}`);
 console.log(res);
 
@@ -2255,4 +2255,49 @@ const obj = {
 const newArr = Object.entries(obj)
     .filter(item => item[1] === 'person')
     .map(item => item[0]);
-console.log(newArr);
+console.log(newArr);*/
+
+
+
+//localStorage.setItem('number', 5);
+//localStorage.getItem('number');
+//console.log(localStorage.getItem('number'));
+//localStorage.removeItem('number');
+//localStorage.clear();
+
+
+const checkbox = document.querySelector('#checkbox'),
+      form = document.querySelector('form'),
+      change = document.querySelector('#color');
+
+if (localStorage.getItem('isChecked')) {
+    checkbox.checked = true;
+}
+
+if (localStorage.getItem('bg') === 'changed') {
+    form.style.backgroundColor ='red';
+}
+
+checkbox.addEventListener('change', () => {
+    localStorage.setItem('isChecked', true);
+});
+
+change.addEventListener('click', () => {
+    if (localStorage.getItem('bg') === 'changed') {
+        localStorage.removeItem('bg');
+        form.style.backgroundColor ='#fff';
+    } else {
+        localStorage.setItem('bg', 'changed');
+        form.style.backgroundColor = 'red';
+    }
+});
+
+const person = {
+    name: 'Alex',
+    age: 25
+};
+
+const serializedPersone = JSON.stringify(person);
+localStorage.setItem('alex', serializedPersone);
+
+console.log(JSON.parse(localStorage.getItem('alex')));
