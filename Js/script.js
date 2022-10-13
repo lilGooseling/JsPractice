@@ -2325,7 +2325,28 @@ console.log(JSON.parse(localStorage.getItem('alex')));*/
 //const reg = /\d/g;
 //console.log(ans.match(reg));
 
-const str = 'My name is R2D2';
+/*const str = 'My name is R2D2';
 console.log(str.match(/\w\d\w\d/i));
 console.log(str.match(/\W/ig));
-console.log(str.match(/\D/ig));
+console.log(str.match(/\D/ig));*/
+
+
+
+//getters and setters
+
+
+const person = {
+    name: 'Alex',
+    age: 25,
+
+    get userAge() {
+        return this.age;
+    },
+
+    set userAge(num) {
+        this.age = num;
+    }
+};
+
+console.log(person.userAge = 30);
+console.log(person.userAge);
