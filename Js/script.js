@@ -2389,7 +2389,7 @@ console.log(ivan.getAge());
 ivan.say();*/
 
 
-class User {
+/*class User {
     constructor(name, age) {
         this.name = name;
         this._age = age;
@@ -2416,6 +2416,10 @@ class User {
             console.log('Недопустимое значение');
         }
     }
+
+    set surname(surname) {
+        this.#surname = surname;
+    }
 }
 
 const ivan = new User('Ivan', 27);
@@ -2425,3 +2429,32 @@ console.log(ivan.age);
 ivan.say();
 
 console.log(ivan.surname);
+ivan.surname = "Sidarov";
+console.log(ivan.surname);*/
+
+
+
+//Прием Модуль
+
+//1. анонимная, самовызывающаяся функция
+
+const number = 1;
+(function () {
+    let number = 2;
+    console.log(number);
+    console.log(number + 3);
+}());
+console.log(number);
+
+// использование объектного интерфейса
+
+const user = (function(){
+    const privat = function () {
+        console.log('I am privat');
+    };
+    return {
+        sayHello: privat
+    };
+}());
+
+user.sayHello();
