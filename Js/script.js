@@ -2438,17 +2438,17 @@ console.log(ivan.surname);*/
 
 //1. анонимная, самовызывающаяся функция
 
-const number = 1;
+/*const number = 1;
 (function () {
     let number = 2;
     console.log(number);
     console.log(number + 3);
 }());
-console.log(number);
+console.log(number);*/
 
 // использование объектного интерфейса
 
-const user = (function(){
+/*const user = (function(){
     const privat = function () {
         console.log('I am privat');
     };
@@ -2457,4 +2457,21 @@ const user = (function(){
     };
 }());
 
-user.sayHello();
+user.sayHello();*/
+
+
+
+
+//commonJs
+
+/*function myModule() {
+    this.hello = function () {
+        console.log('hello');
+    };
+
+    this.goodbye = function () {
+        console.log('bye!');
+    };
+}
+
+module.exports = myModule();*/
