@@ -2475,3 +2475,43 @@ user.sayHello();*/
 }
 
 module.exports = myModule();*/
+
+
+//try catch
+
+/*try {
+    console.log('Normal');
+} catch (e) {
+    console.log('Error');
+}*/
+
+/*try {
+    console.log('Normal');
+    console.log(a);
+    console.log('result');
+} catch (e) {
+    console.log('Error');
+}
+console.log('Still normal');*/
+
+/*try {
+    console.log('Normal');
+    console.log(a);
+    console.log('result');
+} catch (error) {
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.stack);
+}
+console.log('Still normal');*/
+
+
+try {
+    document.querySelector('.active').addEventListener('click', () => {
+        console.log('click');
+    });
+} catch (e) {
+    console.log(e);
+}
+
+console.log('normal');
