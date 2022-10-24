@@ -2558,7 +2558,7 @@ console.log(err.name, err.message, err.stack);*/
 //функции генераторы
 
 
-function* generator() {
+/*function* generator() {
     yield 'S';
     yield 'c';
     yield 'r';
@@ -2576,13 +2576,58 @@ function* count(n) {
     for (let i = 0; i < n; i++) {
         yield i;
     }
-}
+}*/
 
 //const counter = count(7);
 //console.log(counter.next().value);
 //console.log(counter.next().value);
 //console.log(counter.next().value);
 
-for (let k of count(7)) {
+/*for (let k of count(7)) {
     console.log(k);
+}*/
+
+
+
+//JS Animations
+
+// 1-setInterval
+
+const btn = document.querySelector('.btn'),
+      elem = document.querySelector('.box');
+let pos = 0;
+
+/*function myAnimation() {
+    let pos = 0;
+
+    const id = setInterval(frame, 10);
+    function frame() {
+        if (pos == 300) {
+            clearInterval(id);
+        } else {
+            pos++;
+            elem.style.top = pos + "px";
+            elem.style.left = pos + 'px';
+       }
+    }
+ }*/
+
+
+//2- requestAnimationFrame
+
+function myAnimation() {
+    pos++;
+    elem.style.top = pos + "px";
+    elem.style.left = pos + 'px';
+
+    if (pos < 300) {
+        requestAnimationFrame(myAnimation);
+    }
+
 }
+
+
+ btn.addEventListener('click', () => requestAnimationFrame(myAnimation));
+
+//let id = requestAnimationFrame(myAnimation);
+//cancelAnimationFrame(id);

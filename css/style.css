@@ -1,10 +1,35 @@
-* {
+/** {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+}*/
+
 
 .box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: plum;
+}
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 3px solid mediumpurple;
+}
+button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: cornflowerblue;
+    border: none;
+}
+
+
+
+
+/*.box {
     width: 300px;
     height: 250px;
     margin: 40px auto;
@@ -12,7 +37,7 @@
     border: 2px solid black;
     text-align: center;
     font-size: 20px;
-}
+}*/
 
 /*.box {
     width: 150px;
