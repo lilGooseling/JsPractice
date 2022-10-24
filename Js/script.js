@@ -2517,7 +2517,7 @@ console.log('Still normal');*/
 console.log('normal');*/
 
 
-const data =[
+/*const data =[
     {
         id: 'box',
         tag: 'div'
@@ -2546,14 +2546,43 @@ try {
     if (e.name === 'SyntaxError') {
         console.log(e.message);
     } else throw e;
-
-    //console.log(e.name);
-    //console.log(e.message);
-    //console.log(e.stack);
-}
+}*/
 
 /*const err = new Error('ошибка');
 console.log(err.name, err.message, err.stack);*/
 
 //const err = new SyntaxError('ошибка');
 //console.log(err.name, err.message, err.stack);
+
+
+//функции генераторы
+
+
+function* generator() {
+    yield 'S';
+    yield 'c';
+    yield 'r';
+    yield 'i';
+    yield 'p';
+    yield 't';
+}
+
+const str = generator();
+console.log(str.next().value);
+
+
+
+function* count(n) {
+    for (let i = 0; i < n; i++) {
+        yield i;
+    }
+}
+
+//const counter = count(7);
+//console.log(counter.next().value);
+//console.log(counter.next().value);
+//console.log(counter.next().value);
+
+for (let k of count(7)) {
+    console.log(k);
+}
