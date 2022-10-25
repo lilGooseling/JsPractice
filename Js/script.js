@@ -2593,9 +2593,9 @@ function* count(n) {
 
 // 1-setInterval
 
-const btn = document.querySelector('.btn'),
+/*const btn = document.querySelector('.btn'),
       elem = document.querySelector('.box');
-let pos = 0;
+let pos = 0;*/
 
 /*function myAnimation() {
     let pos = 0;
@@ -2615,7 +2615,7 @@ let pos = 0;
 
 //2- requestAnimationFrame
 
-function myAnimation() {
+/*function myAnimation() {
     pos++;
     elem.style.top = pos + "px";
     elem.style.left = pos + 'px';
@@ -2627,7 +2627,57 @@ function myAnimation() {
 }
 
 
- btn.addEventListener('click', () => requestAnimationFrame(myAnimation));
+ btn.addEventListener('click', () => requestAnimationFrame(myAnimation));*/
 
 //let id = requestAnimationFrame(myAnimation);
 //cancelAnimationFrame(id);
+
+
+
+
+
+// web Animations API
+
+
+
+const btnVeges = document.querySelector('#veges'),
+      btnGoose = document.querySelector('#goose'),
+      images = document.querySelectorAll('img');
+
+/*const vegesAnimation = images[0].animate([
+    {transform: 'translateY(0)'},
+    {transform: 'translateY(100px)'},
+    {transform: 'translateY(-100px)'},
+    {transform: 'translateY(0)'}
+], {
+    duration: 3000,
+    iterations: Infinity
+});*/
+
+let vegesAnimation;
+btnVeges.addEventListener('click', () => {
+    if (!vegesAnimation) {
+        vegesAnimation = images[0].animate([
+            {transform: 'translateY(0) rotate(0deg)',
+            filter: 'opacity(100%)'
+            },
+            {transform: 'translateY(100px) rotate(180deg)',
+            filter: 'opacity(50%)'
+            },
+            {transform: 'translateY(-100px) rotate(270deg)',
+            filter: 'opacity(75%)'
+            },
+            {transform: 'translateY(0) rotate(360deg)',
+            filter: 'opacity(100%)'
+            }
+        ], {
+            duration: 3000,
+            iterations: Infinity
+        });
+    } else if (vegesAnimation.playState === 'paused') {
+        vegesAnimation.play();
+    } else {
+        vegesAnimation.pause();
+    }
+});
+
