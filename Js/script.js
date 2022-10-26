@@ -2640,9 +2640,9 @@ let pos = 0;*/
 
 
 
-const btnVeges = document.querySelector('#veges'),
+/*const btnVeges = document.querySelector('#veges'),
       btnGoose = document.querySelector('#goose'),
-      images = document.querySelectorAll('img');
+      images = document.querySelectorAll('img');*/
 
 /*const vegesAnimation = images[0].animate([
     {transform: 'translateY(0)'},
@@ -2654,7 +2654,7 @@ const btnVeges = document.querySelector('#veges'),
     iterations: Infinity
 });*/
 
-let vegesAnimation;
+/*let vegesAnimation;
 btnVeges.addEventListener('click', () => {
     if (!vegesAnimation) {
         vegesAnimation = images[0].animate([
@@ -2679,5 +2679,37 @@ btnVeges.addEventListener('click', () => {
     } else {
         vegesAnimation.pause();
     }
-});
+});*/
+
+
+
+//Event loop
+
+
+/*console.log(1);
+
+setTimeout(() => {
+    console.log('timeout');
+}, 2000);
+
+setTimeout(() => {
+    console.log('timeout_4000');
+}, 4000);
+
+console.log(2);*/
+
+/*let k = 0;
+function count() {
+    for (let i = 0; i < 1e9; i++ ) {
+        k++;
+    }
+    alert('done');
+}
+count();*/
+
+setTimeout(() => {
+    console.log(1);
+}, 0);
+console.log(2);
+
 
