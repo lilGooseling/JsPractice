@@ -2713,7 +2713,7 @@ count();*/
 console.log(2);*/
 
 
-setTimeout(() => console.log('timeout'));
+/*setTimeout(() => console.log('timeout'));
 
 Promise.resolve()
     .then(() => console.log('promise'));
@@ -2723,7 +2723,7 @@ queueMicrotask(() => console.log('wow'));
 Promise.resolve()
     .then(() => console.log('promise_2'));
 
-console.log('code');
+console.log('code');*/
 
 
 // () => {}
@@ -2734,4 +2734,18 @@ console.log('code');
 // render
 // () => {}
 
+
+
+//императивный и декларативный принципы
+
+
+
+function double (arr) {
+    return arr.map((item) => item * 2)
+}
+
+
+function add (arr) {
+    return arr.reduce((prev, current) => prev + current, 0)
+}
 
